@@ -20,11 +20,16 @@ namespace RadarSystem
     /// </summary>
     public partial class MainWindow : Window
     {
+        List<ShipConfiguration> Ships = new List<ShipConfiguration>();
         public MainWindow()
-        { 
-
+        {
+            SelectorShip();
             InitializeComponent();
 
+        }
+        public void SelectorShip()
+        {
+            Ships.Add(new ShipConfiguration(0, 0, 0, "Ship1"));
         }
     }
 }
