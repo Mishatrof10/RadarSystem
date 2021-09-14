@@ -6,10 +6,15 @@ using System.Threading.Tasks;
 
 namespace RadarSystem
 {
-    class GlobalPositionSystem
+    class GlobalPositionSystem : IGPS
     {
        public double S { get; set; }
        public double N { get; set; }
 
+        public void SetGPS(double _S, double _N)
+        {
+            S = _S;
+            N = _N;
+        }
     }
 }

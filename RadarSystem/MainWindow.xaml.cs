@@ -21,14 +21,20 @@ namespace RadarSystem
     public partial class MainWindow : Window
     {
         List<ShipConfiguration> Ships = new List<ShipConfiguration>();
+        GlobalPositionSystem GPS = new GlobalPositionSystem();
         public MainWindow()
         {
             SelectorShip();
             InitializeComponent();
         }
+
+        public void SetGPSCord()
+        {
+            GPS.SetGPS(15,15);
+        }
         public void SelectorShip()
         {
-            Ships.Add(new ShipConfiguration(0, 0, 0, "Ship1"));
+            Ships.Add(new ShipConfiguration(GPS, 0, "Ship1"));
         }
     }
 }
