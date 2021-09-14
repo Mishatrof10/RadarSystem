@@ -8,10 +8,10 @@ namespace RadarSystem
 {
     struct ShipConfiguration
     {
-        double S;
-        double N;
-        double CurrentSpeed;
-        string NameShip;
+        double S { get; set; }
+        double N { get; set; }
+        double CurrentSpeed { get; set; }
+        string NameShip { get; set; }
 
         public ShipConfiguration(double _S, double _N, double _CurrentSpeed, string _NameShip)
         {

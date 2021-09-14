@@ -25,7 +25,6 @@ namespace RadarSystem
         {
             SelectorShip();
             InitializeComponent();
-
         }
         public void SelectorShip()
         {
