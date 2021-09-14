@@ -8,8 +8,8 @@ namespace RadarSystem
 {
     class GlobalPositionSystem
     {
-        double S { get; set; }
-        double N { get; set; }
+       public double S { get; set; }
+       public double N { get; set; }
 
     }
 }

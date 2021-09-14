@@ -8,22 +8,20 @@ namespace RadarSystem
 {
     struct ShipConfiguration
     {
-        double S { get; set; }
-        double N { get; set; }
+        GlobalPositionSystem GPS;
         double CurrentSpeed { get; set; }
         string NameShip { get; set; }
 
-        public ShipConfiguration(double _S, double _N, double _CurrentSpeed, string _NameShip)
+        public ShipConfiguration(GlobalPositionSystem _GPS, double _CurrentSpeed, string _NameShip)
         {
-            S = _S;
-            N = _N;
+            GPS = _GPS;
             CurrentSpeed = _CurrentSpeed;
             NameShip = _NameShip;
         }
 
         public override string ToString()
         {
-            return string.Format($"Судно: {NameShip} \n По координатам: \nN: {N} \nS: {S} \nИдёт со скоростью: {CurrentSpeed}");
+            return string.Format($"Судно: {NameShip} \n По координатам: \nN: {GPS.N} \nS: {GPS.S} \nИдёт со скоростью: {CurrentSpeed}");
         }
     }
 }
